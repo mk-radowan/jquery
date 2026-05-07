@@ -8,13 +8,21 @@
 </head>
 
 <body>
+    <div id="box" style="display: none; padding: 20px;">
+        Hello jQuery slideDown!
+    </div>
     <p>Hellow World</p>
 
     <button id="hide">Hide</button>
     <button id="show">Show</button>
+    <button id="slide">Slide</button>
     <script src="jquery-4.0.0.min.js"></script>
     <script>
         $(document).ready(function () {
+            $("#slide").click(function () {
+                $("#box").slideDown(500);
+            })
+
             $("#hide").click(function () {
                 $('p').hide(500);
             })
@@ -22,6 +30,8 @@
             $("#show").click(function () {
                 $('p').show(500);
             })
+
+
         }) 
     </script>
 </body>
