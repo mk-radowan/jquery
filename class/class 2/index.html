@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        p{
+            width: ;
+        }
+    </style> -->
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus et atque, quis quod nesciunt doloribus
+        quasi ratione mollitia, numquam inventore possimus rem ab doloremque incidunt, temporibus ducimus nihil odit
+        quidem!</p>
+
+    <button id="btn">Efact</button>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('p').css({
+                    "color": "red",
+                    "background-color": "orange",
+                    "width": "400px"
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

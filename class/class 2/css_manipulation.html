@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass {
+            color: brown;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quisquam rem quod voluptatem, corporis eum
+        voluptas. Modi voluptatibus exercitationem nobis illum omnis sapiente, officiis consequatur debitis blanditiis,
+        aliquid, at ab!
+    </p>
+    <button id="btn"> Change</button>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $('#btn').click(function () {
+            $('p').toggleClass('myclass')
+        })
+    </script>
+
+</body>
+
+</html>
