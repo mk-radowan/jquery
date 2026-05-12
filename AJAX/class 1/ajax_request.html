@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Post Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <!-- Added id="name" -->
+        <input type="text" name="username" id="name" placeholder="Enter name">
+        <!-- Added id="btn" -->
+        <input type="submit" id="btn" value="Submit">
+    </form>
+
+    <script>
+        $('#btn').click(function (e) {
+            e.preventDefault();
+
+            var user = $('#name').val();
+
+            $.ajax({
+                url: "store.php",
+                type: "POST",
+                data: {
+                    name: user
+                },
+                success: function (response) {
+                    console.log("Massage:", response);
+                },
+                error: function (xhr, status, error) {
+                    console.log("Error:", error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
