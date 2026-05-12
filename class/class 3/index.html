@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Fix</title>
+    <!-- 1. Added jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 2. Added the ID "pera" to match your script -->
+    <p id="pera">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+
+    <button id="btn">change text</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                // This will now find the paragraph and place "Hello" before it
+                $('#pera').after("<b>Hello</b>");
+            });
+        });
+    </script>
+</body>
+
+</html>

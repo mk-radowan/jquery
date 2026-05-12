@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="box" style="border: 1px solid black; padding: 10px;">
+        <strong>Original:</strong> Bangladesh
+    </div>
+
+    <br>
+    <button id="btnAppend">Append </button>
+    <button id="btnPrepend">Prepend </button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btnAppend').click(function () {
+                $('#box').append(" <span style='color:green;'>Beautyfull Contry</span>");
+            });
+
+
+            $('#btnPrepend').click(function () {
+                $('#box').prepend("<span style='color:red;'>Favorate </span>");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX Load</title>
+    <!-- Added jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <button id="btn">Load Data</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                // Fetches content from data.txt and injects it into #result
+                $.get("data.txt", function (data) {
+                    $('#result').text(data);
+                }).fail(function () {
+                    alert("Error: Could not load data.txt. Make sure you are using a local server!");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

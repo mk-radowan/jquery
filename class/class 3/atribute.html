@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute vs Property</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <a href="https://www.w3schools.com/" target="_blank">w3 school</a><br><br>
+
+    <img src="Mouse.jpg" alt="Mouse Image" id="aa" width="100px">
+    <br>
+    <button id="btn">Change Size</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#aa').attr('height', '300px');
+                $('#aa').attr('width', '500px');
+            });
+        });
+    </script>
+
+    <hr>
+
+
+    <input type="checkbox" id="chk">
+    <br><br>
+
+    <button id="btn2">Checked</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn2').click(function () {
+                $('#chk').prop("checked", true);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
